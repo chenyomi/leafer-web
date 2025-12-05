@@ -58,6 +58,7 @@ export default defineConfig(({ mode }) => {
       : []),
   ]
   return {
+    base: '/leafer-web',
     plugins: [
       vue(),
       // 自动按需引入组件
