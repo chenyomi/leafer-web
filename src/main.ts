@@ -66,7 +66,7 @@ if (import.meta.env.MODE === 'staging' || import.meta.env.MODE === 'production')
   router.beforeEach((to:any, from:any, next:any) => {
     console.log(to,'to.name------123456789')
     // 如果没有token跳转到登录页
-    if (!sessionStorage.getItem('token')) {
+    if (sessionStorage.getItem('token')) {
       if (to.name !== 'AuditLogin') {
         next({ name: 'AuditLogin' })
       } else {

@@ -150,7 +150,7 @@ export const auditRouter = createRouter({
 // 路由守卫
 auditRouter.beforeEach((to:any, from:any, next:any) => {
  // 如果没有token跳转到登录页
- if (!sessionStorage.getItem('token')) {
+ if (sessionStorage.getItem('token')) {
   console.log(to.name,'to.name')
   if (to.name !== 'AuditLogin') {
     next({ name: 'AuditLogin' })
