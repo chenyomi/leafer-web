@@ -1,0 +1,7 @@
+<svg viewBox="0 0 23.67 23.67" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" stroke="#41444a" stroke-miterlimit="10" stroke-width="1" ><path d="m14.27 21.9h-3.34v-20.13h3.34" marker-end="url(#arrowhead)" marker-start="url(#arrowhead2)"/><path d="m7.59 11.84h3.34"/></g>
+<defs>
+<marker id="arrowhead" markerWidth="3" markerHeight="3" refX="0" refY="5" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke" /></marker>
+<marker id="arrowhead2" markerWidth="3" markerHeight="3" refX="10" refY="5" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet"><path d="M 10 0 L 0 5 L 10 10 z" fill="context-stroke"  /></marker>
+</defs>
+</svg>

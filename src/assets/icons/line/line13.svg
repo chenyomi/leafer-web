@@ -1,0 +1,10 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" transform="rotate(180 12 12)">
+  <path d="m1.9 11.78a9.92 9.92 0 1 1 14.56 8.77" fill="none" stroke="#41444a" stroke-miterlimit="10" stroke-width="1" marker-end="url(#customArrow)"/>
+  
+  <defs>
+    <marker id="customArrow" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto" markerUnits="strokeWidth" viewBox="0 0 4 4">
+      <!-- 竖线 -->
+      <path d="M2 0 L2 4" stroke="context-stroke" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

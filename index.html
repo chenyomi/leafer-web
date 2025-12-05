@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 禁用 HTML 缓存的核心 meta 标签 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <script type="module">
+      /**
+       * 根据域名设置页面的 favicon。
+       * - 支持同时更新 `icon` 与 `shortcut icon`。
+       * - 根据文件扩展自动设置正确的 MIME 类型。
+       * @param {string} hostname 当前页面的主机名。
+       * @returns {void}
+       */
+      function setFaviconByDomain(hostname) {
+        /**
+         * 域名到图标路径的映射。
+         * map.set('prod.example.com', '/logo.svg');
+         * map.set('staging.example.com', '/logo.png');
+         * 当前示例：包含“oa”的域名使用 PNG，其余使用 SVG。
+         * @type {Map<string, string>}
+         */
+        const map = new Map();
+
+        let iconPath = null;
+        if (hostname.includes('oa')) {
+          iconPath = '/logo.svg';
+        } else {
+          iconPath = '/logo.png';
+        }
+        const ext = iconPath.endsWith('.svg') ? 'image/svg+xml' : 'image/png';
+
+        /**
+         * 确保存在指定 rel 的 link 标签并更新其属性。
+         * @param {"icon"|"shortcut icon"} rel 需要更新的 link rel 值。
+         * @returns {void}
+         */
+        const ensureLink = (rel) => {
+          let link = document.querySelector(`link[rel="${rel}"]`);
+          if (!link) {
+            link = document.createElement('link');
+            link.setAttribute('rel', rel);
+            document.head.appendChild(link);
+          }
+          link.setAttribute('type', ext);
+          link.setAttribute('href', iconPath);
+        };
+
+        ensureLink('icon');
+        ensureLink('shortcut icon');
+      }
+
+      // 立即执行，确保主应用加载前已生效
+      setFaviconByDomain(location.hostname);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SciPixa</title>
+    <!-- 引入字体 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+HK:wght@200..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif+TC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 引入字体许可证 -->
+    <link href="/fonts/OFL.md" rel="stylesheet" />
+    <link href="/fonts/OFL.txt" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

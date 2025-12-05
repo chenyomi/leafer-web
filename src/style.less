@@ -1,0 +1,287 @@
+@import './styles/variables.less';
+
+.arco-dropdown-open .arco-icon-down {
+    transform: rotate(180deg);
+}
+
+// 按钮
+.icon-btn {
+    background-color: transparent !important;
+
+    &:not(.arco-btn-disabled) {
+        &:hover {
+            background-color: var(--color-secondary-hover) !important;
+        }
+        &:active {
+            background-color: var(--color-secondary-active) !important;
+        }
+    }
+}
+
+.arco-btn-text.arco-btn-secondary{
+    color: var(--color-text-2) !important;;
+    //background-color: var(--color-secondary);
+}
+.arco-btn-text.arco-btn-secondary:hover{
+    color: var(--color-text-2) !important;
+}
+.arco-icon-check{
+    color:rgb(var(--primary-6));
+}
+.color-text-1{
+    color: var(--color-neutral-10);
+}
+.color-text-2{
+    color: var(--color-text-2);
+}
+.pd-5px{
+    padding: 5px;
+}
+
+// 禁止文字选中
+/* 兼容 Webkit (Chrome, Safari, Opera) 和 Blink (Edge, Chrome) 浏览器 */
+.not-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 兼容 Firefox 浏览器 */
+.not-select {
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* 兼容 IE 浏览器 */
+.not-select {
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.truncated {
+    display: inline-block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.w18px{
+    width:18px
+}
+.h18px{
+    height:18px
+}
+.text-left{
+  text-align: left !important;
+}
+.attr-panel .arco-select-view-single{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.title-text{
+  font-size: 12px;
+  color: #515151;
+  margin-bottom: 5px;
+}
+.arco-tabs-content{
+    padding-top: 0px !important;
+}
+.arco-btn{
+    background-color: #E6E8E9;
+}
+//全局输入框样式重置
+.arco-input-wrapper{
+    background: #EDEDED;
+    border-radius: 5px !important;
+    height: 25px !important;
+}
+.arco-select-view-single{
+    background: #FFFFFF !important;
+    border-radius: 5px !important;
+    border: 1px solid #EAEAEA !important;
+}
+.arco-input-prefix,
+.arco-input-suffix {
+    font-size: 12px !important;
+}
+
+// 修复 arco-input-number-suffix 高度问题
+.arco-input-number-suffix {
+    height: auto !important;
+    line-height: normal !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.arco-input-number-mode-embed .arco-input-number-step {
+    height: auto !important;
+    max-height: 100% !important;
+}
+
+.arco-input-number-mode-embed .arco-input-number-step .arco-input-number-step-button {
+    height: 50% !important;
+    max-height: 12px !important;
+}
+
+// 修复 cursor-ew-resize 高度问题
+.cursor-ew-resize {
+    height: auto !important;
+    line-height: normal !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-height: 100% !important;
+}
+
+// 修复 SwipeNumber 组件中的高度问题
+.arco-input-wrapper.hasLabel {
+    .arco-input-prefix {
+        height: auto !important;
+        max-height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+//下拉框样式重置
+.arco-select-option-selected {
+    // background-color: #E6E8E9 !important;
+    height: 30px !important;
+}
+.arco-select-option{
+    height: 30px !important;
+}
+.arco-select-dropdown .arco-select-option{
+    width: 90% !important;
+    margin-left: 5% !important;
+    border-radius: 5px !important;
+}
+.arco-select-option:hover{
+    background-color: #E6E8E9 !important;
+}
+.arco-select-dropdown-list-wrapper{
+    max-height:300px !important;
+}
+//去除滚动条
+.arco-scrollbar-track-direction-vertical{
+    display: none;
+}
+//设置全局a-modal的样式
+.arco-modal-body{
+    overflow: visible !important;
+}
+.p2{
+    padding: 10px !important;
+}
+.primary-button{
+    width: 120px;
+    height: 36px;
+    background-color: #6793CF;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.cancel-button{
+    width: 120px;
+    height: 36px;
+    background-color: #E2E2E2;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.delete-button{
+    width: 120px;
+    height: 36px;
+    background-color: #B23232;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.cancel-other-button{
+    width: 120px;
+    height: 36px;
+    background-color: #fff;
+    color: #6793CF;
+    box-sizing: border-box;
+    border: 2px solid #6793CF;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+// 暂无数据状态样式
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  
+    .empty-icon {
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+  
+    .empty-text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 8px;
+    }
+  
+    .empty-desc {
+      font-size: 14px;
+      color: #999;
+      line-height: 1.4;
+    }
+  }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 !important;
+}
+.emoji-img{
+    width: 18px !important;
+    height: 18px !important;
+    display: inline-block;
+    margin: 0 2px;
+    vertical-align: middle;
+}
+.arco-color-picker-panel{
+    width: 280px !important;
+}
+.arco-tree-select-popup .arco-tree-select-tree-wrapper {
+  max-height: 380px !important;
+} 

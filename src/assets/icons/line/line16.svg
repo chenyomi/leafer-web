@@ -1,0 +1,27 @@
+<svg viewBox="0 0 23.67 23.67" xmlns="http://www.w3.org/2000/svg">
+ <g>
+ <path d="M1.9 11.78 A9.92 9.92 0 0 1 10.90 2.40" fill="none" stroke="#41444a" stroke-miterlimit="10" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="0" refY="5" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet">
+      <path d="M0 0 L10 5 L0 10 z" fill="context-stroke" />
+    </marker>
+  </defs>
+ </g>
+  <g transform="rotate(120 11.835,11.835)">
+ <path d="M1.9 11.78 A9.92 9.92 0 0 1 10.90 2.40" fill="none" stroke="#41444a" stroke-miterlimit="10" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="0" refY="5" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet">
+      <path d="M0 0 L10 5 L0 10 z" fill="context-stroke" />
+    </marker>
+  </defs>
+ </g>
+ <g transform="rotate(240 11.835,11.835)">
+ <path d="M1.9 11.78 A9.92 9.92 0 0 1 10.90 2.40" fill="none" stroke="#41444a" stroke-miterlimit="10" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="0" refY="5" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10" preserveAspectRatio="xMidYMid meet">
+      <path d="M0 0 L10 5 L0 10 z" fill="context-stroke" />
+    </marker>
+  </defs>
+ </g>
+  
+</svg>
